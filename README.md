@@ -11,10 +11,13 @@ The --open (or just -o) option automatically opens your browser to http://localh
 
 To connect the angular app with firebase 
 1.
+
     ​firebase login --reauth 
 2.
+
     ​npm i -D firebase-tools 
 3.
+
     ng add @angular/fire
 
 To work directly with the Firebase's db
