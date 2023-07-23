@@ -1,0 +1,14 @@
+/*footer*/
+footer{
+    position: fixed;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+    background-color: #F49E20;
+    padding: 5px;
+}
+
+footer p{
+    text-align: center;
+}
