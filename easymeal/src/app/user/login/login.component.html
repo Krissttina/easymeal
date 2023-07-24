@@ -2,13 +2,26 @@
     <!--Body here-->
     <section class="container">
         <h3>Log In</h3>
-        <form >
-            <label for="nickname">Nickname:</label>
-            <input type="text" id="nickname" name="nickname">
+        <form class="login" action="" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"
+            placeholder="Merry"
+            #inputEmail>
+
+            <!--<p class="error">Username is required!</p>-->
+
+
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <p>You don’t have an account? Go <a routerLink="/register">Register</a></p>
-            <button>Submit</button>
+            <input type="password" id="password" name="password"
+            placeholder="******"
+            #inputPassword>
+
+            <!--<p class="error">Password is required!</p>
+            <p class="error">Password must be at least 4 characters!</p>-->
+
+
+            <p>Have an account? <a routerLink="/register">Register</a></p>
+            <button>Login</button>
           </form>
     </section>
 </main>

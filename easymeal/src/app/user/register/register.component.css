@@ -44,3 +44,10 @@ button:hover{
     background-color: #f1960e;
     cursor: pointer;
 }
+
+/* error */
+.error{
+    padding: 3px 0;
+    color: rgb(247, 29, 29);
+    font-size: 12px;
+}

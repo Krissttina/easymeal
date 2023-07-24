@@ -2,17 +2,43 @@
 <!--Body here-->
 <section class="container">
     <h3>Register</h3>
-    <form >
-        <label for="nickname">Nickname:</label>
-        <input type="text" id="nickname" name="nickname">
+    <form class="register" action="" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"
+        placeholder="Merry"
+        >
+
+        <!--<p class="error">Username is required!</p>-->
+
+
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email"
+        placeholder="merry@gmail.com"
+        >
+
+        <!--<p class="error">Email is required!</p>
+        <p class="error">Email is not valid!</p>-->
+
+
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password"
+        placeholder="******"
+        >
+
+        <!--<p class="error">Password is required!</p>
+        <p class="error">Password must be at least 4 characters!</p>-->
+
+
         <label for="repeat-password">Repeat Password:</label>
-        <input type="password" id="repeat-password" name="repeat-password">
-        <p>You don’t have an account? Go <a routerLink="/login">Log in</a></p>
-        <button>Submit</button>
+        <input type="password" id="repeat-password" name="repeat-password"
+        placeholder="******"
+        >
+
+        <!--<p class="error">Repeat Password does not match password!</p>-->
+
+
+        <p>Have an account? <a routerLink="/login">Log in</a></p>
+        <button>Create Account</button>
       </form>
 </section>
 </main>
