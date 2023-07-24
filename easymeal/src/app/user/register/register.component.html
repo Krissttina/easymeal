@@ -2,13 +2,17 @@
 <!--Body here-->
 <section class="container">
     <h3>Register</h3>
-    <form class="register" action="" method="post">
+    <form class="register" (ngSubmit)="onRegister()">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username"
         placeholder="Merry"
+        formControlName="username"
         >
 
-        <!--<p class="error">Username is required!</p>-->
+        <ng-container *ngIf="form.get('username')?.touched">
+        <p class="error" *ngIf="form.get('username')?.errors?.['required']"
+        >Username is required!</p>
+        </ng-container>
 
 
         <label for="email">Email:</label>

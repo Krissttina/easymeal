@@ -2,11 +2,15 @@
     <!--Body here-->
     <section class="container">
         <h3>Log In</h3>
-        <form class="login" action="" method="post">
+        <form class="login">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"
             placeholder="Merry"
-            #inputEmail>
+            #inputUsername
+            ngModel
+            required
+            
+          >
 
             <!--<p class="error">Username is required!</p>-->
 
@@ -21,7 +25,7 @@
 
 
             <p>Have an account? <a routerLink="/register">Register</a></p>
-            <button>Login</button>
+            <button >Login</button>
           </form>
     </section>
 </main>
