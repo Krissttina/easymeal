@@ -4,10 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { MainComponent } from './main/main.component';
-import { FooterComponent } from './core/footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './core/header/header.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
@@ -20,13 +16,20 @@ import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 
+import { HttpClientModule } from '@angular/common/http';
+import { UserModule } from './user/user.module';
+import { CoreModule } from './core/core.module';
+import { RouterModule } from '@angular/router';
+import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
+import { MainComponent } from './main/main.component';
+import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     MainComponent,
-    FooterComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,11 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     provideMessaging(() => getMessaging()),
     providePerformance(() => getPerformance()),
     provideRemoteConfig(() => getRemoteConfig()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    HttpClientModule,
+    CoreModule,
+    RouterModule,
+    UserModule,
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

@@ -16,11 +16,6 @@ const routes: Routes = [
     component: RegisterComponent,
     // canActivate: [AuthActivate],
   },
-  {
-    path: 'profile',
-    //component: ProfileComponent,
-    // canActivate: [AuthActivate],
-  },
 ];
 
 @NgModule({
