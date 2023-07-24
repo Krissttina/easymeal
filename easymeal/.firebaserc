@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "easymeal-8befe": {
+      "hosting": {
+        "easymeal": [
+          "easymeal-8befe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "easymeal-8befe"
+  }
+}
