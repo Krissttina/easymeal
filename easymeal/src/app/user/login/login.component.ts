@@ -14,7 +14,7 @@ export class LoginComponent {
   onLogin(form: NgForm): void {
     console.log(form.value);
 
-    //this.userService.login();
+    this.userService.login();
     this.router.navigate(["/"]);
   }
 }

@@ -13,10 +13,10 @@ export class UserService {
   user: User | undefined;
 
   constructor(private http: HttpClient) { }
-
-  login(email: string, password: string) {
+//email: string, password: string
+  login() {
     return this.http
-      .post<User>('/api/login', { email, password })
+      .post<User>('/api/login', {  })
       .pipe(tap((user) => this.user$$.next(user)));
   }
 

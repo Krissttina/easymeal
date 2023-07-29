@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 //import { DEFAULT_EMAIL_DOMAINS } from "src/app/shared/constants";
 //import { appEmailValidator } from "src/app/shared/validators/app-email-validator";
-//import { matchPasswordsValidator } from "src/app/shared/validators/match-pswds";
+import { matchPasswordsValidator } from "src/app/shared/validators/match-pswds";
 
 @Component({
   selector: "app-register",
@@ -11,7 +11,7 @@ import { FormBuilder, Validators } from "@angular/forms";
 })
 export class RegisterComponent {
   form = this.fb.group({
-    username: ["", [Validators.required, Validators.minLength(5)]],
+    username: ["", [Validators.required,]],
     email: [
       "",
       [Validators.required],
@@ -22,7 +22,7 @@ export class RegisterComponent {
         rePassword: ["", [Validators.required]],
       },
       {
-       // validators: [matchPasswordsValidator("password", "rePassword")],
+       validators: [matchPasswordsValidator("password", "rePassword")],
       }
     ),
   });
@@ -36,7 +36,4 @@ export class RegisterComponent {
 
     console.log(this.form.value);
   }
-}
-function matchPasswordsValidator(arg0: string, arg1: string): any {
-  throw new Error('Function not implemented.');
 }
