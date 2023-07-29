@@ -2,7 +2,7 @@
 <!--Body here-->
 <section class="container">
     <h3>Register</h3>
-    <form class="register" (ngSubmit)="onRegister()">
+    <form class="register" [formGroup]="form" (ngSubmit)="onRegister()">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username"
         placeholder="Merry"

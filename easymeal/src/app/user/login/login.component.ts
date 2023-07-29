@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +12,7 @@ export class LoginComponent {
   constructor(private userService: UserService, private router: Router) {}
 
   onLogin(form: NgForm): void {
-    if (form.invalid) {
-      return;
-    }
+    console.log(form.value);
 
     //this.userService.login();
     this.router.navigate(["/"]);

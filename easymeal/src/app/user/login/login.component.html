@@ -2,27 +2,53 @@
     <!--Body here-->
     <section class="container">
         <h3>Log In</h3>
-        <form class="login">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"
-            placeholder="Merry"
-            #inputUsername
+        <form class="login" #form="ngForm" (ngSubmit)="onLogin(form)">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"
+            placeholder="merry@gmail.com"
+            #inputEmail="ngModel"
             ngModel
             required
             
           >
 
-            <!--<p class="error">Username is required!</p>-->
+          <ng-container *ngIf="inputEmail.touched">
+            <p class="error" *ngIf="inputEmail.errors?.['required']">
+              Email is required!</p>
+          </ng-container>
 
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password"
             placeholder="******"
-            #inputPassword>
+            #inputPassword="ngModel"
+            ngModel
+            required
+            minlength="3"
+            >
 
-            <!--<p class="error">Password is required!</p>
-            <p class="error">Password must be at least 4 characters!</p>-->
+            <ng-container *ngIf="inputPassword.touched">
+              <p class="error" *ngIf="inputPassword.errors?.['required']">
+                Password is required!</p>
+              <p class="error" 
+              *ngIf="inputPassword?.errors?.['minlength']">
+            Password must be at least
+            {{
+             inputPassword?.errors?.['minlength'].length
+            }}
+            characters!
+          </p>
+            </ng-container>
 
+
+            <!--<p class="error" 
+              *ngIf="form.get('passGroup')?.get('password')?.errors?.['minlength']">
+            Password must be at least
+            {{
+              form.get('passGroup')?.get('password')?.errors?.['minlength']?.['requiredLength']
+            }}
+            characters!
+          </p>-->
 
             <p>Have an account? <a routerLink="/register">Register</a></p>
             <button >Login</button>
