@@ -11,7 +11,8 @@
             required
             
           >
-
+<!--[appEmail]="appEmailDomains"
+*ngIf="inputEmail.errors?.['appEmailValidator']"-->
           <ng-container *ngIf="inputEmail.touched">
             <p class="error" *ngIf="inputEmail.errors?.['required']">
               Email is required!</p>

@@ -22,10 +22,11 @@
         >
 
         <ng-container *ngIf="form.get('email')?.touched">
+          <p class="error">Email is not valid!</p>
           <p class="error" *ngIf="form.get('email')?.errors?.['required']"
           >Email is required!</p>
         </ng-container>
-        <!--<p class="error">Email is not valid!</p>-->
+        
 
         <ng-container formGroupName="passGroup">
         <label for="password">Password:</label>

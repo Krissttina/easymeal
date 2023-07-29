@@ -33,7 +33,7 @@ export class RegisterComponent {
     if (this.form.invalid) {
       return;
     }
-//new change
+
     console.log(this.form.value);
   }
 }

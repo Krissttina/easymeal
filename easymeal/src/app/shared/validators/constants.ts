@@ -1,0 +1,1 @@
+export const email_domain = ['com']
