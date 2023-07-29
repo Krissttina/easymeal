@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { matchPasswordsValidator } from "src/app/shared/validators/match-pswds";
-//import { DEFAULT_EMAIL_DOMAINS } from "src/app/shared/constants";
-//import { appEmailValidator } from "src/app/shared/validators/app-email-validator";
 
 @Component({
   selector: "app-register",

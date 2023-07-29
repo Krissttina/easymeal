@@ -3,7 +3,7 @@ import { FormGroup, ValidatorFn } from "@angular/forms";
 export function matchPasswordsValidator(
     passValue: string, rePassValue: string
     ): ValidatorFn{
-    return (control)=>{
+    return (control) => {
         const group = control as FormGroup;
         const pass1 = group.get(passValue);
         const pass2 = group.get(rePassValue);
