@@ -14,7 +14,10 @@ export class RegisterComponent {
     username: ["", [Validators.required,]],
     email: [
       "",
-      [Validators.required],
+      [
+        Validators.required,
+        Validators.email
+      ],
     ],
     passGroup: this.fb.group(
       {
