@@ -11,8 +11,7 @@
             required
             
           >
-<!--[appEmail]="appEmailDomains"
-*ngIf="inputEmail.errors?.['appEmailValidator']"-->
+
           <ng-container *ngIf="inputEmail.touched">
             <p class="error" *ngIf="inputEmail.errors?.['required']">
               Email is required!</p>
@@ -36,7 +35,7 @@
               *ngIf="inputPassword?.errors?.['minlength']">
             Password must be at least
             {{
-             inputPassword?.errors?.['minlength'].length
+             inputPassword?.errors?.['minlength']['requiredLength']
             }}
             characters!
           </p>

@@ -24,7 +24,8 @@
         <ng-container *ngIf="form.get('email')?.touched">
           <p class="error" *ngIf="form.get('email')?.errors?.['required']"
           >Email is required!</p>
-          <p class="error" *ngIf="form.get('email')?.invalid">
+          <p class="error" *ngIf="form.get('email')?.invalid"
+          >
             Email is invalid!</p>
         </ng-container>
         
@@ -63,12 +64,7 @@
         >
 
         <ng-container *ngIf="form.get('passGroup')?.get('rePassword')?.touched">
-          <p
-            class="error"
-            *ngIf="form.get('passGroup')?.get('password')?.errors?.['required']"
-          >
-          <p
-            class="error"
+          <p class="error"
             *ngIf="form.get('passGroup')?.errors?.['matchPasswordsValidator'] ||
              form.get('passGroup')?.get('rePassword')?.errors?.['required']"
           >
