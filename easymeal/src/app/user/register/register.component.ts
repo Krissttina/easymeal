@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { matchPasswordsValidator } from "src/app/shared/validators/match-pswds";
+import { UserService } from "../user.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-register",
@@ -28,7 +30,11 @@ export class RegisterComponent {
     ),
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService,
+    private router: Router
+    ) {}
 
   onRegister(): void {
     if (this.form.invalid) {
@@ -36,5 +42,17 @@ export class RegisterComponent {
     }
 
     console.log(this.form.value);
+
+    const { 
+      username,
+      email,
+      passGroup: { password, rePassword } = {},
+    } = this.form.value;
+
+    this.userService
+    .register(username!, email!, password!, rePassword!
+      )
+      this.router.navigate(["/login"]);
+    
   }
 }

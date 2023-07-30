@@ -17,7 +17,11 @@ export class LoginComponent {
     }
     console.log(form.value);
 
-    this.userService.login();
-    this.router.navigate(["/"]);
+    const { email, password } = form.value;
+
+    this.userService.login(email, password)
+      this.router.navigate(["/"]);
+    
+    
   }
 }

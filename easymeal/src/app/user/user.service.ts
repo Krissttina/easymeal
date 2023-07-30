@@ -17,11 +17,18 @@ export class UserService {
     return !!this.user;
   }
 
-  constructor(private http: HttpClient) { }
-//email: string, password: string
-  login() {
+  constructor(private http: HttpClient) { 
+    try {
+    const lsUser = localStorage.getItem(this.USER_KEY) || '';
+    this.user = JSON.parse(lsUser);
+  } catch (error) {
+    this.user = undefined;
+  }
+}
+
+  login(email: string, password: string) {
     return this.http
-      .post<User>('/api/login', {  })
+      .post<User>('/login', { email, password }) //returnes observable
       .pipe(tap((user) => this.user$$.next(user)));
   }
 
@@ -32,7 +39,7 @@ export class UserService {
     rePassword: string
   ) {
     return this.http
-      .post<User>('/api/register', {
+      .post<User>('/register', {
         username,
         email,
         password,
