@@ -12,6 +12,10 @@ export class UserService {
 
   user: User | undefined;
 
+  get isLogged(): boolean {
+    return !!this.user;
+  }
+
   constructor(private http: HttpClient) { }
 //email: string, password: string
   login() {
