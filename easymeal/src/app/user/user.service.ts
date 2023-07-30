@@ -11,6 +11,7 @@ export class UserService {
   public user$ = this.user$$.asObservable();
 
   user: User | undefined;
+  USER_KEY = '[user]';
 
   get isLogged(): boolean {
     return !!this.user;
@@ -40,5 +41,8 @@ export class UserService {
       .pipe(tap((user) => this.user$$.next(user)));
   }
 
-
+  logout(): void {
+    this.user = undefined;
+    localStorage.removeItem(this.USER_KEY);
+  }
 }
