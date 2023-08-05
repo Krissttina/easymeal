@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  },
 ];
 
 @NgModule({

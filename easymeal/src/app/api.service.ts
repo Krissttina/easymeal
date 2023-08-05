@@ -1,10 +1,11 @@
-import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { tap } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-
-  constructor(private httpClient: HttpClientModule) { }
+  constructor(private http: HttpClient) {}
 }
