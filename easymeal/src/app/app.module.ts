@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { appInterceptorProvider } from './app.interceptor';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DetailsComponent } from './details/details.component';
     HomeComponent,
     CatalogComponent,
     DetailsComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
