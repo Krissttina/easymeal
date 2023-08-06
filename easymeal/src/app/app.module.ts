@@ -21,6 +21,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CreateComponent } from './create/create.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CreateComponent } from './create/create.component';
     DetailsComponent,
     NotFoundComponent,
     CreateComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
