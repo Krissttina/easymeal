@@ -5,6 +5,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CreateComponent } from './create/create.component';
+import { AuthActivate } from './core/guards/auth.active';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateComponent,
+    canActivate: [AuthActivate],
   },
   {
     path: 'auth',

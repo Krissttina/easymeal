@@ -66,7 +66,7 @@ export class UserService implements OnDestroy{
 
   getProfile() {
     return this.http
-      .get<User>('/api/users/profile')
+      .get<User>('')
       .pipe(tap((user) => this.user$$.next(user)));
   }
 
