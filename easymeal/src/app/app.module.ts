@@ -20,8 +20,9 @@ import { appInterceptorProvider } from './app.interceptor';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { CreateComponent } from './create/create.component';
+import { CreateComponent } from './recipe/create/create.component';
 import { AuthComponent } from './auth/auth.component';
+import { RecipeModule } from './recipe/recipe.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { AuthComponent } from './auth/auth.component';
     CatalogComponent,
     DetailsComponent,
     NotFoundComponent,
-    CreateComponent,
+    //CreateComponent,
     AuthComponent,
   ],
   imports: [
@@ -42,6 +43,7 @@ import { AuthComponent } from './auth/auth.component';
    // RouterModule,
     UserModule,
     SharedModule,
+    RecipeModule,
   ],
   providers: [
     appInterceptorProvider,

@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { CreateComponent } from './create/create.component';
+import { CreateComponent } from './recipe/create/create.component';
 import { AuthActivate } from './core/guards/auth.active';
 
 const routes: Routes = [

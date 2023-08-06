@@ -2,28 +2,38 @@
     <!--Body here-->
     <section class="container">
         <h3>Create recipe</h3>
-        <form>
+        <form #form="ngForm" (ngSubmit)="newRecipe(form)">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" ngModel>
+
+        
             <label for="photo">Photo:</label>
-            <input type="text" id="photo" name="photo">
+            <input type="text" id="photo" name="photo" ngModel>
+
+
             <label for="text">Ingrediants:</label>
-            <input type="text" id="ingrediants" name="ingrediants">
+            <input type="text" id="ingrediants" name="ingrediants" ngModel>
+
+
             <label for="text">Instructions:</label>
-            <input type="text" id="instructions" name="instructions">
+            <input type="text" id="instructions" name="instructions" ngModel>
+
             <ul>
                 <li>
                     <label for="prep-time">Prep time:</label>
-                    <input type="number" id="prep-time" name="prep-time">
+                    <input type="number" id="prep-time" name="prep-time" ngModel>
+
                 </li>
                 <li>
                     <label for="cook-time">Cook time:</label>
-                    <input type="number" id="cook-time">
+                    <input type="number" id="cook-time" name="cook-time" ngModel>
+
                 </li>
                 <li>
                     <label for="servings">Servings:</label>
                     <input type="number" id="servings"
-                        name="servings">
+                        name="servings" ngModel>
+                        
                 </li>
             </ul>
             <button>Create</button>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent {
-
+  constructor(private formsModul: FormsModule){}
+ 
+  newRecipe(form: NgForm): void{
+    console.log(form.value);
+    
+  }
 }
