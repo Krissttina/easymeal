@@ -20,6 +20,7 @@ import { appInterceptorProvider } from './app.interceptor';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     CatalogComponent,
     DetailsComponent,
     NotFoundComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
