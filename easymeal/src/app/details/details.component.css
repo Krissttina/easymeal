@@ -6,6 +6,7 @@ body{
 
 main{
     display: flex;
+    background: linear-gradient(#F49E20, #fffbf4);
 }
 
 .container{
