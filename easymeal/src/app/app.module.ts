@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { appInterceptorProvider } from './app.interceptor';
 import { CatalogComponent } from './catalog/catalog.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CatalogComponent } from './catalog/catalog.component';
     MainComponent,
     HomeComponent,
     CatalogComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
