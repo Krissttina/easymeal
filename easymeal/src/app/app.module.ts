@@ -17,12 +17,14 @@ import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { appInterceptorProvider } from './app.interceptor';
+import { CatalogComponent } from './catalog/catalog/catalog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HomeComponent,
+    CatalogComponent,
   ],
   imports: [
     BrowserModule,
