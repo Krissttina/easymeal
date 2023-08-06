@@ -14,7 +14,7 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
-    // canActivate: [AuthActivate],
+    //canActivate: [AuthActivate],
   },
   {
     path: 'profile',
