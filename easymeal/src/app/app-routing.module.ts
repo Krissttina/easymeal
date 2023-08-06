@@ -20,7 +20,7 @@ const routes: Routes = [
     component: CatalogComponent,
   },
   {
-    path: 'details',
+    path: ':id/details',
     component: DetailsComponent,
   },
   {
