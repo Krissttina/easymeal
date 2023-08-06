@@ -17,7 +17,7 @@ import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { appInterceptorProvider } from './app.interceptor';
-import { CatalogComponent } from './catalog/catalog/catalog.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 @NgModule({
   declarations: [
