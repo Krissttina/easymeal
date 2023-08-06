@@ -1,0 +1,59 @@
+/*body*/
+
+main{
+    background: linear-gradient(#F49E20, #fffbf4);   
+}
+
+
+.container {
+    border-radius: 10px;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+
+    padding: 30px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.133);
+
+    border: 1px solid #fff;
+    box-shadow: 0 0 16px 0 rgba(29, 29, 29, 0.203);
+}
+
+ul {
+    display: flex;
+    gap: 15px;}
+
+h3 {
+    padding-bottom: 25px;
+}
+
+form {
+    display: inline-grid;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+li {
+    list-style-type: none
+}
+
+button {
+    margin-top: 15px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    background-color: #f59a11;
+}
+
+button:hover {
+    background-color: #F49E20;
+    cursor: pointer;
+}
