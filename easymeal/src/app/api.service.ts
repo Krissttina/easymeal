@@ -12,6 +12,6 @@ export class ApiService {
 
   getRecipes() {
     const { apiUrl } = environment;
-    return this.http.get<Recipe[]>(`${apiUrl}/recipes`);
+    return this.http.get<Recipe[]>(`${apiUrl}/recipe`);
   }
 }

@@ -1,5 +1,5 @@
 export interface Recipe {
-    username: string;
+    name: string;
     image: string;
     ingediants: string;
     instructions: string;

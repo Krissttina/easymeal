@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { ObjectId } = mongoose.Schema.Types;
 
 const recipeSchema = new mongoose.Schema({
     name: {
@@ -32,7 +31,6 @@ const recipeSchema = new mongoose.Schema({
         required: true,
     },
 
-},
-);
+});
 
 module.exports = mongoose.model('Recipe', recipeSchema);
