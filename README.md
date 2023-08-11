@@ -13,15 +13,6 @@ The ng serve command launches the server, watches your files, and rebuilds the a
 
 The --open (or just -o) option automatically opens your browser to http://localhost:4200/.
 
-To connect the angular app with firebase 
-1.
+------------------------------------
 
-    ​firebase login --reauth 
-2.
-
-    ​npm i -D firebase-tools 
-3.
-
-    ng add @angular/fire
-
-To work directly with the Firebase's db
+Note: While trying to create recipeController for creating and saving data a problem occurred. The data were taken from **req.body** correctly but the **create** function was still **undefined**.
