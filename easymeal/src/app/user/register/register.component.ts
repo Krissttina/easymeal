@@ -53,9 +53,6 @@ export class RegisterComponent {
       this.router.navigate(['/']);
     })
 
-    console.log(this.form.value);
-    //localStorage.setItem('user', JSON.stringify(this.form.value))
-    //this.router.navigate(['/']);
-    //this.form.reset();
+    //console.log(this.form.value);
   }
 }
