@@ -32,7 +32,7 @@ export class UserService implements OnDestroy{
 }
 
   login(email: string, password: string) {
-    console.log(this.isLogged);
+   // console.log(this.isLogged);
 
     return this.http
       .post<User>('/api/login', { email, password }) //returnes observable

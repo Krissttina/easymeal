@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { FormBuilder, NgForm } from '@angular/forms';
-import { RecipeService } from '../recipe.service';
+import { NgForm } from '@angular/forms';
+//import { RecipeService } from '../recipe.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-create',
@@ -9,48 +11,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent {
-  constructor(
-    private fb: FormBuilder,
-    private recipeService: RecipeService,
-    private router: Router
-    ){}
+  constructor(private apiService: ApiService, private router: Router) {}
 
-    
- 
-  newRecipe(form: NgForm): void{
+  o$ = new Observable();
+
+  newRecipe(form: NgForm): void {
     if (form.invalid) {
       return;
     }
 
-    console.log(form.value);
-    
-      const {
-        name,
-        image,
-        ingediants,
-        instructions,
-        prepTime,
-        cookTime,
-        servings,
-    } = form.value;
-  
-  this.recipeService.create(
-    name,
-    image,
-    ingediants,
-    instructions,
-    prepTime,
-    cookTime,
-    servings,
-  ).subscribe(() => {
-    this.router.navigate(['/catalog']);
-  })
-  
-  
-  }
-  //   this.userService
-  //   .register(username!, email!, password!, rePassword!)
-  //   .subscribe(() => {
-  //     this.router.navigate(['/']);
-  //   })
+   // console.log('err');
+
+    const {name,
+      image,
+      ingediants,
+      instructions,
+      prepTime,
+      cookTime,
+      servings} = form.value;
+      
+    this.apiService.createRecipe(name,
+      image,
+      ingediants,
+      instructions,
+      prepTime,
+      cookTime,
+      servings).subscribe();
+
+  } 
 }

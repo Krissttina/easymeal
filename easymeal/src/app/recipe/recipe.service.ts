@@ -19,7 +19,7 @@ export class RecipeService {
     servings: number,
   ){
     return this.http
-      .post<Recipe>('/api/recipe', {
+      .post<Recipe>('/recipe', {
         name,
         image,
         ingediants,
@@ -28,22 +28,6 @@ export class RecipeService {
         cookTime,
         servings,
       })
+  
   }
-  // register(
-  //   username: string,
-  //   email: string,
-  //   password: string,
-  //   rePassword: string
-  // ) {
-    
-  //   console.log(this.isLogged);
-  //   return this.http
-  //     .post<User>('/api/register', {
-  //       username,
-  //       email,
-  //       password,
-  //       rePassword,
-  //     })
-  //     .pipe(tap((user) => this.user$$.next(user)));
-  // }
 }
